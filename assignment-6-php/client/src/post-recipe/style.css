@@ -1,0 +1,80 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #2D2D2D;
+}
+
+body {
+  padding: 0 7.5rem;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header > nav {
+  margin-left: auto;
+}
+
+header > nav > ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header > nav > ul > li {
+  margin: 3rem;
+}
+
+header > nav > ul > li > a {
+  text-decoration: none;
+  color: #2D2D2D;
+}
+
+.button, .button--blank, .button--primary, .button--primary--large {
+  cursor: pointer;
+}
+
+.button--blank {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.button--primary, .button--primary--large {
+  background: #FF931E;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  padding: 0.85rem 5rem;
+}
+
+.button--primary--large {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.ubb-recipes-logo {
+  width: 8rem;
+  height: 4rem;
+}
+
+.ubb-recipes-logo > img {
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  margin-top: 3.3rem;
+  font-size: 2.1rem;
+}
+/*# sourceMappingURL=style.css.map */

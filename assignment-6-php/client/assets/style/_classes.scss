@@ -1,0 +1,76 @@
+@import './variables';
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: $black;
+}
+
+body {
+  padding: 0 7.5rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+
+  > nav {
+    margin-left: auto;
+
+    > ul {
+      list-style: none;
+      display: flex;
+
+      > li {
+        margin: 3rem;
+
+        > a {
+          text-decoration: none;
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  cursor: pointer;
+  &--blank {
+    @extend .button;
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  &--primary {
+    @extend .button;
+    background: $orange;
+    border: none;
+    outline: none;
+    color: $white;
+    padding: 0.85rem 5rem;
+
+    &--large {
+      @extend .button--primary;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.ubb-recipes-logo {
+  width: 8rem;
+  height: 4rem;
+
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+h2 {
+  margin-top: 3.3rem;
+  font-size: 2.1rem;
+}

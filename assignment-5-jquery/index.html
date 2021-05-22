@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Popups</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form action="" id="main-form">
+        <label for="first-name">First Name</label>
+        <input type="text" name="first-name" id="main-first-name">
+        
+        <label for="last-name">Last Name</label>
+        <input type="text" name="last-name">
+
+        <label for="age">Age</label>
+        <input type="text" name="age">
+        
+        <label for="email">Email</label>
+        <input type="email" name="email">
+
+        <label for="username">Username</label>
+        <input type="text" name="username">
+
+        <button type="submit" id="btn-1">Open popup</button>
+    </form>
+
+    <div id="popup">
+        <div id="popup__content">
+            <h1>POPUP✅</h1>
+            <form action="">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="popup-first-name">
+                
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="popup-last-name">
+        
+                <label for="username">Username</label>
+                <input type="text" name="username" id="popup-username">
+                
+                <label for="email">Email</label>
+                <input type="email" name="email" id="popup-email">
+
+                <button type="submit" id="btn-2">Close popup</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#popup").hide();
+
+            $("#btn-1").click(function(e){
+                e.preventDefault();
+                $("#popup").show();
+                $("#main-form").find(':input').prop("disabled", true)
+            });
+
+            $("#btn-2").click(function(e) {
+                e.preventDefault();
+
+                var concatenatedString = $("#popup-first-name").val() + $("#popup-last-name").val() + $("#popup-username").val() + $("#popup-email").val();
+                $("#main-first-name").val(concatenatedString);
+                $("#main-form").find(':input').prop("disabled", false)
+
+                $("#popup").hide();
+            });
+        });
+    </script>
+</body>
+</html>

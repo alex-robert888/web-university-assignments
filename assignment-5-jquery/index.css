@@ -1,0 +1,18 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+}
+
+#popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(53, 35, 54, 0.2);
+    width: 100vw;
+    height: 100vh;
+}

@@ -1,0 +1,38 @@
+@import '../../assets/style/classes';
+@import '../../assets/style/variables';
+
+body {
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  height: 80vh;
+}
+
+#home-page-right {
+  > img {
+    position: absolute;
+    top: -200px;
+    left: 840px;   
+    z-index: -1; 
+    overflow: auto;
+  }
+}
+
+#home-page-left {
+  max-width: 35%;
+  > * {
+    margin: 1.5rem 0;
+  }
+
+  > h1 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
+
+  > h3 {
+    font-weight: 400;
+  }
+}
