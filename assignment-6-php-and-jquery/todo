@@ -1,0 +1,16 @@
+* [ ] server
+  * [x] get all
+  * [x] create
+  * [ ] show by id
+  * [x] update
+  * [ ] delete
+  * [ ] browser 
+
+* [ ] client
+  * [ ] get all
+  * [ ] create
+  * [ ] show by id
+  * [ ] update
+  * [ ] delete
+  * [ ] browser 
+  * [ ] save last browser in local storage
