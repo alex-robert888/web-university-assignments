@@ -63,9 +63,9 @@
 
     public function filterByType() {
       header("Access-Control-Allow-Methods: GET");
-      $body = json_decode(file_get_contents('php://input'));
+      $type = isset($_GET['type']) ? $_GET['type'] : die();
       $recipe = new Recipe();
-      $recipe->setType($body->type);
+      $recipe->setType($type);
       $recipes = $recipe->filterByType();
       $this->renderRecipesFromDb($recipes);
     }

@@ -8,34 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;0,800;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>UBB Recipes. Cook your daily meal.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <script src="../shared/components/header/header.js" type="text/javascript" defer></script>
+    <script src="./script.js"></script>
 </head>
 <body>
-    <header>
-        <button class="ubb-recipes-logo button--blank">
-            <img src="../../assets/svg/logo.svg" alt="UBB Recipes Logo">
-        </button>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/client/src/home/index.html" >Home</a>
-                </li>
-                <li>
-                    <a href="/client/src/discover-recipes/index.html"><strong>Discover</strong></a>
-                </li>
-                <li>
-                    <a href="/client/src/browse-recipe/index.html">Browse</a>
-                </li>
-                <li>
-                    <a href="/client/src/post-recipe/index.html">Post</a>
-                </li>
-                <li>
-                    <a href="/client/src/edit-recipe/index.html">Edit</a>
-                </li>
-        </nav>
-    </header>
-
+    <the-header></the-header>
     <main>
         <h2>Some fresh recipes</h2>
+
+        <ul id="discover-recipes__cards-list"></ul>
     </main>
 </body>
 </html>

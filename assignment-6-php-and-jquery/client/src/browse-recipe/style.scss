@@ -1,2 +1,10 @@
 @import '../../assets/style/classes';
 @import '../../assets/style/variables';
+
+#browser-recipes__cards-list {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 0.8fr);
+  justify-content: space-between;
+  row-gap: 2rem;
+}

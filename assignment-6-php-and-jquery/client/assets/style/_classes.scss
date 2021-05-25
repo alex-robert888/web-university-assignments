@@ -9,7 +9,7 @@
 }
 
 body {
-  padding: 0 7.5rem;
+  padding: 0 17rem;
 }
 
 header {
@@ -72,5 +72,69 @@ header {
 
 h2 {
   margin-top: 3.3rem;
+  margin-bottom: 2rem;
   font-size: 2.1rem;
+}
+
+ul {
+  list-style: none;;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+input {
+  height: 2.4rem;
+  margin-bottom: 0.6rem;
+  padding: 0 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  
+  button {
+    margin-top: 2rem;
+  }
+}
+
+.discover-recipes__card {
+  width: 22vw;
+  height: 65vh;
+  background: #F7F7F7;
+  padding: 1rem;
+  overflow: scroll;
+
+  > p {
+    margin-top: 1rem;
+  }
+}
+
+.discover-recipes__card__header {
+  display: flex;
+
+  > div {
+    margin-left: auto;
+    button {
+      margin: 0 0.3rem;
+    }
+
+    img {
+      width: 1.5rem;
+    }
+  }
+}
+
+.discover-recipes__card__type-tag {
+  background-color: $orange;
+  margin-top: 0.6rem;
+  display: inline-flex;
+  padding: 0.2rem 0.45rem;
+
+  > span {
+    color: white; 
+    font-weight: 600;
+  }
 }

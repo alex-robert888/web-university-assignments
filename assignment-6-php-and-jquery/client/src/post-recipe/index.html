@@ -6,33 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <script src="../shared/components/header/header.js" type="text/javascript" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <script src="../shared/components/header/header.js" type="text/javascript" defer></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>UBB Recipes. Cook your daily meal.</title>
 </head>
 <body>
-    <header>
-        <button class="ubb-recipes-logo button--blank">
-            <img src="../../assets/svg/logo.svg" alt="UBB Recipes Logo">
-        </button>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="">Discover</a>
-                </li>
-                <li>
-                    <a href="">Browse</a>
-                </li>
-                <li>
-                    <a href="">Post</a>
-                </li>
-                <li>
-                    <a href="">Edit</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-</header>
+    <the-header></the-header>
+
+    <h2>Create a new recipe</h2>
+
+    <form action="" id="insert-recipe-form">
+        <label for="name">Name </label>
+        <input type="text" name="name" id="">
+        <label for="author">Author </label>
+        <input type="text" name="author" id="">
+        <label for="type">Type </label>
+        <input type="text" name="type" id="">
+        <label for="cotent">Content </label>
+        <input id="content" name="content" rows="20">
+        <button type="submit" class="button--primary">Submit</button>
+    </form>
 </body>
 </html>
