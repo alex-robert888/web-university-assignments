@@ -53,6 +53,6 @@ $(document).ready(() => {
   });
 
   $("body").on("click", ".edit-recipe", (e) => {
-    
+    window.location.href = `../edit-recipe/index.html?id=${e.target.id}`;
   });
 })
