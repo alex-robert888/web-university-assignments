@@ -8,12 +8,12 @@ function fetchRecipes() {
       response["data"].map(recipe => {
         $("#discover-recipes__cards-list").append(
           `
-            <li>
+            <li id="li-card-${recipe.id}">
               <article class="discover-recipes__card" scrollable>
                 <div class="discover-recipes__card__header">
-                  <div>
-                    <button class="button--blank"><img src="../../assets/svg/delete.svg" alt="Delete Icon"></button>
-                    <button class="button--blank"><img src="../../assets/svg/edit.svg" alt="Edit Icon"></button>
+                    <div>
+                      <button  class="delete-recipe" id=${recipe.id}><img id=${recipe.id} src="../../assets/svg/delete.svg" alt="Delete Icon"></button>
+                      <button  class="edit-recipe" id=${recipe.id}><img id=${recipe.id} src="../../assets/svg/edit.svg" alt="Edit Icon"></button>
                     </div>
                   </div>
       
@@ -36,6 +36,23 @@ function fetchRecipes() {
   });
 }
 
-$(document).ready(async () => {
+function deleteRecipe(id) {
+  $.ajax({
+    type: "DELETE",
+    url: `http://localhost/facultate/ANUL%202/sem2/web/assignment-6-php-and-jquery/server/src/api/recipes/destroy.php/?id=${id}`,
+    contentType:'application/json'
+  });
+}
+
+$(document).ready(() => {
   fetchRecipes();
+
+  $("body").on("click", ".delete-recipe", (e) => {
+    deleteRecipe(e.target.id);
+    $(`#li-card-${e.target.id}`).remove();
+  });
+
+  $("body").on("click", ".edit-recipe", (e) => {
+    
+  });
 })

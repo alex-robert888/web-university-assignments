@@ -37,6 +37,8 @@ header {
 
 .button {
   cursor: pointer;
+  z-index: 100;
+
   &--blank {
     @extend .button;
     background: none;

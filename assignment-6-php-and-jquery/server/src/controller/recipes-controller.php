@@ -23,9 +23,9 @@
 
     public function show() {
       header("Access-Control-Allow-Methods: GET");
-      $body = json_decode(file_get_contents('php://input'));
+      $id = isset($_GET['id']) ? $_GET['id'] : die();
       $recipe = new Recipe();
-      $recipe->setId($body->id);
+      $recipe->setId($id);
       $recipes = $recipe->show();
       $this->renderRecipesFromDb($recipes);
     }
@@ -55,9 +55,9 @@
 
     public function destroy() {
       header("Access-Control-Allow-Methods: DELETE");
-      $body = json_decode(file_get_contents('php://input'));
+      $id = isset($_GET['id']) ? $_GET['id'] : die();
       $recipe = new Recipe();
-      $recipe->setId($body->id);
+      $recipe->setId($id);
       $recipe->destroy();
     }
 

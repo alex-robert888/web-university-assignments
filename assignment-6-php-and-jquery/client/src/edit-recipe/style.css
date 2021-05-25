@@ -42,6 +42,7 @@ header > nav > ul > li > a {
 
 .button, .button--blank, .button--primary, .button--primary--large {
   cursor: pointer;
+  z-index: 100;
 }
 
 .button--blank {
