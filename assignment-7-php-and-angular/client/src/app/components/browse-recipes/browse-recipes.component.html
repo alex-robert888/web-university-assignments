@@ -1,0 +1,26 @@
+<h1>Browse recipes</h1>
+
+<form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+    <label for="type">Type</label>
+    <input type="text" name="type" formControlName="type">
+    <button type="submit">Search</button>
+</form>
+
+<table *ngIf="recipesFiltered$ | async; else no_recipes">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Author</th>
+        <th>Content</th>
+    </tr>
+    <tr *ngFor="let r of (recipesFiltered$ | async)">
+        <td>{{r.name}}</td>
+        <td>{{r.type}}</td>
+        <td>{{r.author}}</td>
+        <td>{{r.content}}</td>
+    </tr>
+</table>
+
+<ng-template #no_recipes>
+    <h2>There are no recipes!</h2>
+</ng-template> 

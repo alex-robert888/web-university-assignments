@@ -13,13 +13,6 @@ function fetchRecipesByType(payload) {
           `
             <li>
               <article class="discover-recipes__card" scrollable>
-                <div class="discover-recipes__card__header">
-                  <div>
-                    <button class="button--blank"><img src="../../assets/svg/delete.svg" alt="Delete Icon"></button>
-                    <button class="button--blank"><img src="../../assets/svg/edit.svg" alt="Edit Icon"></button>
-                    </div>
-                  </div>
-      
                 <div class="discover-recipes__card__type-tag">
                   <span>${recipe.type}</span>
                 </div>

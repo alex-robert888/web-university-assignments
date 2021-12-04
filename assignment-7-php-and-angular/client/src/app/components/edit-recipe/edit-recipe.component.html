@@ -1,0 +1,8 @@
+<h1>Edit</h1>
+<form [formGroup]="recipeForm" (ngSubmit)="onEditFormSubmit()">
+    name: <input type="text" name="name" id="name" formControlName="name">
+    type: <input type="text" name="type" id="type" formControlName="type">
+    author: <input type="text" name="author" id="author" formControlName="author">
+    content: <input type="text" name="content" id="content" formControlName="content">
+    <button type="submit">Submit</button>
+</form>

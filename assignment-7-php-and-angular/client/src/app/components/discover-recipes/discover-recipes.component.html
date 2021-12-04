@@ -1,0 +1,26 @@
+<h1>Some fresh recipes</h1>
+
+
+<table *ngIf="recipes$ | async; else no_recipes">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Author</th>
+        <th>Content</th>
+    </tr>
+    <tr *ngFor="let r of (recipes$ | async)">
+        <td>{{r.name}}</td>
+        <td>{{r.type}}</td>
+        <td>{{r.author}}</td>
+        <td>{{r.content}}</td>
+        <td>
+            <button (click) = "deleteRecipe(r.id)">Delete</button>
+            <a [routerLink]="['/edit/' + r.id]" (click)="onEditLinkClicked(r)"> | Edit</a> 
+        </td>
+    </tr>
+</table>
+
+<ng-template #no_recipes>
+    <h2>There are no recipes!</h2>
+</ng-template> 
+
